@@ -1,7 +1,7 @@
-import backgroundColor from '../utils/lib'
+import colors from '../utils/colors'
 
 export default ({ kyu, done, total }) => {
-  const bgColor = backgroundColor(kyu)
+  const bgColor = colors[kyu]
   const percentage = done / total * 100
 
   return (
