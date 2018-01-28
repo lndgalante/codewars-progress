@@ -50,7 +50,7 @@ Index.getInitialProps = async ({ req }) => {
       )
       const dataRepo = await resRepo.json()
 
-      const dataCodewars = await scrapeIt(`https://www.codewars.com/kata/search/?q=&r%5B%5D=-${kyu}&beta=false`, {
+      const dataCodewars = await scrapeIt(`https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-${kyu}&beta=false`, {
         totalKatas: {
           selector: 'p.mlx.mtn.is-gray-text',
           convert: x => x.match(/\d/g).join(''),
